@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import { NavBarResponsive } from "./components/NavBarResponsive/NavBarResponsive";
+import { Home } from "./pages/Home/Home";
+import { SobreMi } from "./pages/Sobre mi/SobreMi";
+import { Encontrar } from "./pages/Encontrar/Encontrar";
+import { Libros } from "./pages/Libros/Libros";
+import { BoxMultisensorial } from "./pages/BoxMultisensorial/BoxMultisensorial";
+import { Contactame } from "./pages/Contactame/Contactame";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <NavBarResponsive />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/sobre-mi" element={<SobreMi />} />
+          <Route path="/que-vas-a-encontrar" element={<Encontrar />} />
+          <Route path="/libros" element={<Libros />} />
+          <Route path="/box-multisensorial" element={<BoxMultisensorial />} />
+          <Route path="/contactame" element={<Contactame />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 
