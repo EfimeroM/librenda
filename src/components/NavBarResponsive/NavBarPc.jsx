@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import "./NavBarPc.scss";
 import logoLibrenda from "../../assets/logo-librenda.png";
 import logoLibrendaDark from "../../assets/logo-librenda-dark.png";
@@ -8,7 +8,7 @@ import { Theme } from "../../context/themes";
 export const NavBarPc = () => {
   const { navBg, text, clicked, setTheme } = useContext(Theme);
   const [animation, setAnimation] = useState(false);
-
+  
   const cambiarTema = (tema) => {
     setTheme(tema);
     setAnimation(true);
@@ -44,7 +44,7 @@ export const NavBarPc = () => {
           <Link
             to={"/"}
             className="li"
-            onClick={() => cambiarTema("theme-sobre-mi")}
+            onClick={() => cambiarTema("theme-sobre-mi")} 
             style={
               clicked === "sobreMi"
                 ? { color: navBg, backgroundColor: "white" }
@@ -71,7 +71,7 @@ export const NavBarPc = () => {
             onClick={() => cambiarTema("theme-libros")}
             style={
               clicked === "libros"
-                ? { color: navBg, backgroundColor: "#3B1D00" }
+                ? { color: navBg, backgroundColor: "#3B1D00", boxShadow: "inset 0 0 0 0px red" }
                 : { color: text }
             }
             disabled={clicked === "libros"}

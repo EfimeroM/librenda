@@ -1,0 +1,122 @@
+#footer{
+    height: 450px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .content{
+        height: 410px;
+        width: 100%;
+        display: flex;
+        .redes{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 19vw;
+            }
+            .icons{
+                margin-top: 20px;
+                display: flex;
+                a{  
+                    width: 32px;
+                    height: 30px;
+                    padding: 8px;
+                    display: flex;
+                    margin: 0 10px;
+                    border-radius: 10px;
+                    .icon{
+                        width: 32px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+        .redes-full{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 19vw;
+            }
+            .icons{
+                margin-top: 20px;
+                display: flex;
+                a{  
+                    width: 32px;
+                    height: 30px;
+                    padding: 8px;
+                    display: flex;
+                    margin: 0 10px;
+                    border-radius: 10px;
+                    .icon{
+                        width: 32px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+        .contacto{
+            width: 50%;
+            form{
+                display: flex;
+                flex-direction: column;
+                h2{
+                    font-size: 1.4rem;
+                }
+                p{
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                }
+                .input{
+                    border-radius: 10px;
+                    width: 60%;
+                    font-size: 1.2rem;
+                    padding: 7px 1vw;
+                    outline: none;
+                }
+                .textarea{
+                    height: 80px
+                }
+                .submit{
+                    width: 65%;
+                    border-radius: 5px;
+                    font-size: .7rem;
+                    font-weight: 500;
+                    padding: 5px 1vw;
+                    background-color: rgba(255, 0, 0, 0);
+                    border: none;
+                    outline: none;
+                    margin-top: 20px;
+                }
+                .submit:hover{
+                    cursor: pointer;
+                }
+                .submit-animation{
+                    animation: fadeIn .5s linear;
+                }
+            }
+        }
+    }
+    .by{
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-size: 1rem;
+            font-weight: 600;
+        }
+    }
+}
+@keyframes fadeIn {
+    from{
+        opacity: 20%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
