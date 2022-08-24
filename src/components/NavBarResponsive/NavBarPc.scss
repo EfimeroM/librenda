@@ -1,0 +1,40 @@
+#nav-bar-responsive {
+  #nav-bar-pc {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .logo-librenda {
+      width: 200px;
+    }
+    .nav {
+      ul {
+        display: flex;
+        .li {
+          font-weight: 600;
+          padding: 0 10px;
+          text-decoration: none;
+          padding: 10px;
+          margin: 0 0.4vw;
+          border-radius: 5px;
+          font-size: 1vw;
+        }
+        .li:hover {
+          box-shadow: inset 0 0 0 3px #ffff;
+        }
+      }
+    }
+  }
+  .nav-animation {
+    animation: fade 1.5s linear;
+  }
+}
+@keyframes fade {
+  from {
+    -webkit-filter: sepia(40%);
+  }
+  to {
+    -webkit-filter: sepia(0);
+  }
+}
