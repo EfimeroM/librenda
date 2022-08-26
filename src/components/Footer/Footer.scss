@@ -1,0 +1,92 @@
+#footer {
+  height: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .content {
+    height: 410px;
+    width: 100%;
+    display: flex;
+    .redes {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 19vw;
+      }
+      .icons {
+        margin-top: 20px;
+        display: flex;
+        a {
+          width: 32px;
+          height: 30px;
+          padding: 8px;
+          display: flex;
+          margin: 0 10px;
+          border-radius: 10px;
+          .icon {
+            width: 32px;
+            height: 30px;
+          }
+        }
+      }
+    }
+    .redes-full {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 19vw;
+      }
+      .icons {
+        margin-top: 20px;
+        display: flex;
+        a {
+          width: 32px;
+          height: 30px;
+          padding: 8px;
+          display: flex;
+          margin: 0 10px;
+          border-radius: 10px;
+          .icon {
+            width: 32px;
+            height: 30px;
+          }
+        }
+      }
+    }
+    .contacto {
+      width: 50%;
+    }
+  }
+  .by {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p {
+      font-size: 1rem;
+      font-weight: 600;
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+}
+.animation-form {
+    animation-name: animationForm;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes animationForm {
+  from {
+    margin-top: 200px
+  }
+  to {
+    margin-top: 0;
+  }
+}

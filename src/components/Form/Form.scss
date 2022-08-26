@@ -1,0 +1,46 @@
+form{
+    display: flex;
+    flex-direction: column;
+    h2{
+        font-size: 1.4rem;
+    }
+    p{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .input{
+        border-radius: 10px;
+        width: 60%;
+        font-size: 1.2rem;
+        padding: 7px 1vw;
+        outline: none;
+    }
+    .textarea{
+        height: 80px
+    }
+    .submit{
+        width: 65%;
+        border-radius: 5px;
+        font-size: .7rem;
+        font-weight: 600;
+        padding: 10px 1vw;
+        background-color: rgba(255, 0, 0, 0);
+        border: none;
+        outline: none;
+        margin-top: 20px;
+    }
+    .submit:hover{
+        cursor: pointer;
+    }
+    .submit-animation{
+        animation: fadeIn .7s linear;
+    }
+}
+@keyframes fadeIn {
+    from{
+        opacity: 20%;
+    }
+    to{
+        opacity: 100%;
+    }
+}

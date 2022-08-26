@@ -1,0 +1,66 @@
+#item-list-container-multisensorial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  .container-multisensorial {
+    width: 87%;
+    padding: 2vh 2vw;
+    .container {
+        margin-top: 5vh;
+      .slider {
+        width: 100%;
+        display: flex;
+        .card {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .card-style {
+            width: 300px;
+            margin: 3vh 0;
+            margin-right: 10vw;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            padding: 2vh 1vw;
+            img {
+              width: 100%;
+              border-radius: 10px;
+            }
+            h3 {
+              color: #200051;
+              font-weight: 700;
+            }
+            p {
+              color: #200051;
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+      h2 {
+        color: #3a048a;
+        font-size: 2.2rem;
+        margin: 0;
+      }
+      .vector {
+        height: 20px;
+      }
+    }
+  }
+}
+#item-list-container-multisensorial:after {
+    position: absolute;
+    content:"";
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background: linear-gradient(to bottom, rgba(255,0,0,0) 0%,rgb(254, 248, 255) 100%);
+}
