@@ -14,7 +14,7 @@ export const ThemeProvider = ({ children }) => {
     switch (location.pathname) {
       case "/":
         setNavBg("#55B191");
-        document.body.style = "background: #E4FFF6;";
+        document.body.style = "background: #ffff;";
         setText("white");
         setClicked("sobreMi");
         setBorderInput("#00A86E")
@@ -45,7 +45,7 @@ export const ThemeProvider = ({ children }) => {
         document.body.style = "background: #F7EDF3;";
         setText("white");
         setClicked("contactame");
-        setBorderInput("#ffff")
+        setBorderInput("#4c0b2f")
         break;
       default:
         break;

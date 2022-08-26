@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./Footer.scss";
 import { Theme } from "../../context/themes";
 import logoLibrenda from "../../assets/logo-librenda.png";
@@ -9,17 +9,18 @@ import {
   AiFillYoutube,
 } from "react-icons/ai";
 import { IoLogoTiktok } from "react-icons/io5";
+import { Form } from "../Form/Form";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
-  const { navBg, text, clicked, borderInput } = useContext(Theme);
-  const [hover, setHover] = useState(false);
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-  };
+  const { navBg, text, clicked } = useContext(Theme);
 
   return (
-    <div id="footer" style={{ background: navBg }}>
+    <div
+      id="footer"
+      style={{ background: navBg }}
+      className={clicked === "contactame" && "animation-form"}
+    >
       <div className="content">
         <div className={clicked === "contactame" ? "redes-full" : "redes"}>
           {clicked === "libros" ? (
@@ -78,45 +79,24 @@ export const Footer = () => {
         {clicked !== "contactame" && (
           <div className="contacto" style={{ color: text }}>
             <h2>DEJÁ ACÁ TU CONSULTA</h2>
-            <form>
-              <p>Tu e-mail</p>
-              <input
-                type="email"
-                className="input"
-                style={{
-                  border: `3px solid ${borderInput}`,
-                  background: text,
-                  color: navBg,
-                }}
-              />
-              <p>Escribí tu consulta</p>
-              <textarea
-                className="input textarea"
-                style={{
-                  border: `3px solid ${borderInput}`,
-                  background: text,
-                  color: navBg,
-                }}
-              ></textarea>
-              <button
-                type="submit"
-                className={hover ? "submit-animation submit" : "submit"}
-                value={"ENVIAR"}
-                onClick={(e) => onSubmit(e)}
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
-                style={
-                  hover
-                    ? { boxShadow: `inset 0 0 0 3px white`, color: text }
-                    : { borderBottom: `2px solid ${text}`, color: text }
-                }
-              >ENVIAR</button>
-            </form>
+            <Form />
           </div>
         )}
       </div>
       <div className="by" style={{ background: text, color: navBg }}>
-        <p>•• librenda. 2022. diseño y desarrollo por ••</p>
+        <p>
+          •• librenda. 2022.{" "}
+          <a
+            className="related-box"
+            href="https://cutt.ly/oXCrGOb"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: navBg }}
+          >
+            DISEÑO Y DESARROLLO POR EL EQUIPO
+          </a>
+          {" "}••
+        </p>
       </div>
     </div>
   );

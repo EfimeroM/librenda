@@ -1,0 +1,86 @@
+#contactame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 2vw 100px 2vw;
+  .animation-contactame {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    text-align: center;
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 96%;
+      height: 200px;
+      margin-left: -500px;
+      margin-top: 100px;
+      animation-name: animationContactame;
+      animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+      h1 {
+        font-size: 3rem;
+        color: #4c0b2f;
+        margin: 1vh;
+      }
+      h2 {
+        color: #4c0b2f;
+        font-family: "Bitter", serif;
+        font-size: 1.3rem;
+        font-weight: 100;
+      }
+    }
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-size: 1.4rem;
+    }
+    p {
+      font-size: 1.2rem;
+      font-weight: 500;
+    }
+    .input {
+      border-radius: 10px;
+      width: 50vw;
+      font-size: 1.2rem;
+      padding: 7px 1vw;
+      outline: none;
+    }
+    .textarea {
+      height: 80px;
+    }
+    .submit {
+      width: 52.35vw;
+      border-radius: 5px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      padding: 10px 1vw;
+      background-color: rgba(255, 0, 0, 0);
+      border: none;
+      outline: none;
+      margin-top: 20px;
+    }
+    .submit:hover {
+      cursor: pointer;
+    }
+    .submit-animation {
+      animation: fadeIn 0.5s linear;
+    }
+  }
+}
+@keyframes animationContactame {
+  from {
+    margin-left: -500px;
+    margin-top: 100px;
+  }
+  to {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
