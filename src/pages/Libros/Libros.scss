@@ -21,6 +21,19 @@
       justify-content: center;
       align-items: flex-start;
       padding: 0 7vw;
+      .head {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        h2 {
+          font-size: 1rem;
+          border-radius: 5px;
+          background-color: #ffc692;
+          color: #3b1d00;
+          padding: 1vh 2vw;
+          margin: 2vh 0 4vh 0;
+        }
+      }
       .content-animation {
         margin-bottom: 200px;
         margin-left: 300px;
@@ -85,21 +98,176 @@
       }
     }
   }
+  @keyframes animationBannerLibros {
+    0% {
+      background-size: 100vh;
+      opacity: 10%;
+    }
+    50% {
+      background-size: 140vh;
+      background-position: top;
+      background-position-x: 140%;
+    }
+    100% {
+      opacity: 100%;
+      background-size: 140vh;
+      background-position: top;
+      background-position-x: 140%;
+    }
+  }
 }
-@keyframes animationBannerLibros {
-  0% {
-    background-size: 100vh;
-    opacity: 10%;
+@media (max-width: 1400px) {
+  #libros {
+    .banner {
+      height: 58vh;
+      background-size: 60vh;
+      background-position: top right;
+      .content {
+        .content-animation {
+          h1 {
+            font-size: 3.7rem;
+          }
+          p {
+            font-size: 0.9rem;
+          }
+        }
+        .head {
+          h2 {
+            font-size: 1rem;
+            margin: 4vh 0 4vh 0;
+          }
+        }
+      }
+    }
+    @keyframes animationBannerLibros {
+      0% {
+        background-size: 60vh;
+        opacity: 10%;
+      }
+      50% {
+        background-size: 110vh;
+        background-position: top right;
+        background-position-x: 115%;
+      }
+      100% {
+        opacity: 100%;
+        background-size: 110vh;
+        background-position: top right;
+        background-position-x: 115%;
+      }
+    }
   }
-  50% {
-    background-size: 140vh;
-    background-position: top;
-    background-position-x: 140%;
+}
+@media (max-width: 900px) {
+  #libros {
+    .banner {
+      height: 90vh;
+      background-size: 120vw;
+      background-position: bottom right;
+      .content {
+        justify-content: flex-start;
+        .content-animation {
+          h1 {
+            font-size: 2.5rem;
+          }
+          p {
+            font-size: 0.9rem;
+            width: 100%;
+          }
+        }
+      }
+      .content:after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(
+          to top,
+          rgba(255, 0, 0, 0) 0%,
+          rgba(146, 127, 108, 0.156) 100%
+        );
+      }
+      .search {
+        width: 96vw;
+        margin-left: 2vw;
+        height: 7vh;
+        margin-top: -10vh;
+        background-color: #ffc692;
+        position: absolute;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        -webkit-filter: blur(1.2px);
+        filter: blur(1.2px);
+        .icon {
+          width: 10%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .img {
+            width: 55%;
+            height: 55%;
+            color: #3b1d00;
+          }
+        }
+        input {
+          width: 60%;
+          height: 60%;
+          border-radius: 3px;
+          border: none;
+          padding: 0 1%;
+          font-size: 1rem;
+          background-color: white;
+        }
+        select {
+          background-color: white;
+          width: 20%;
+          font-size: 1rem;
+          height: 60%;
+          margin:0 2%;
+          padding: 6px;
+        }
+      }
+    }
+    @keyframes animationBannerLibros {
+      0% {
+        background-size: 120vw;
+        opacity: 10%;
+      }
+      50% {
+        background-size: 100vw;
+        background-position: bottom right;
+        background-position-x: 100%;
+      }
+      100% {
+        opacity: 100%;
+        background-size: 100vw;
+        background-position: bottom right;
+        background-position-x: 100%;
+      }
+    }
   }
-  100% {
-    opacity: 100%;
-    background-size: 140vh;
-    background-position: top;
-    background-position-x: 140%;
+}
+@media (max-width: 600px) {
+  #libros {
+    .banner {
+      height: 90vh;
+      background-size: 100vw;
+      background-position: bottom right;
+      .content {
+        justify-content: flex-start;
+        .content-animation {
+          h1 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
   }
 }

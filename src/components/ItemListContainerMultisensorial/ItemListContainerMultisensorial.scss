@@ -11,10 +11,10 @@
   -ms-user-select: none;
   user-select: none;
   .container-multisensorial {
-    width: 87%;
+    width: 85%;
     padding: 2vh 2vw;
     .container {
-        margin-top: 5vh;
+      margin-top: 5vh;
       .slider {
         width: 100%;
         display: flex;
@@ -56,11 +56,39 @@
   }
 }
 #item-list-container-multisensorial:after {
-    position: absolute;
-    content:"";
-    height:100%;
-    width:100%;
-    top:0;
-    left:0;
-    background: linear-gradient(to bottom, rgba(255,0,0,0) 0%,rgb(254, 248, 255) 100%);
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0) 0%,
+    rgb(254, 248, 255) 100%
+  );
+}
+@media (max-width: 600px) {
+  #item-list-container-multisensorial {
+    .container-multisensorial {
+      .container {
+        .slider {
+          .card {
+            .card-style {
+              width: 200px;
+            }
+          }
+        }
+        h2 {
+          color: #3a048a;
+          font-size: 1.8rem;
+          margin: 0;
+        }
+        .vector {
+          height: 20px;
+          opacity: 0.5;
+        }
+      }
+    }
+  }
 }

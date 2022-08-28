@@ -31,7 +31,6 @@
             padding: 2vh 1vw;
             img {
               width: 100%;
-
               border-radius: 10px;
             }
             h3 {
@@ -84,4 +83,28 @@
     rgba(255, 0, 0, 0) 0%,
     rgb(237, 222, 211) 100%
   );
+}
+@media (max-width: 600px) {
+  #item-list-container-libros {
+    .container-libros {
+      .container {
+        .slider {
+          .card {
+            .card-style {
+              width: 180px;
+            }
+          }
+        }
+        h2 {
+          color: #3B1D00;
+          font-size: 1.8rem;
+          margin: 0;
+        }
+        .vector {
+          height: 20px;
+          opacity: 0.3;
+        }
+      }
+    }
+  }
 }
