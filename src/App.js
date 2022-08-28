@@ -1,12 +1,14 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
-import { NavBarResponsive } from "./components/NavBarResponsive/NavBarResponsive";
-import { SobreMi } from "./pages/Sobre mi/SobreMi";
-import { Encontrar } from "./pages/Encontrar/Encontrar";
-import { Libros } from "./pages/Libros/Libros";
+
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+
 import { BoxMultisensorial } from "./pages/BoxMultisensorial/BoxMultisensorial";
 import { Contactame } from "./pages/Contactame/Contactame";
+import { Encontrar } from "./pages/Encontrar/Encontrar";
 import { Footer } from "./components/Footer/Footer";
+import { Libros } from "./pages/Libros/Libros";
+import { NavBarResponsive } from "./components/NavBarResponsive/NavBarResponsive";
+import { SobreMi } from "./pages/Sobre mi/SobreMi";
 import { ThemeProvider } from "./context/themes";
 
 function App() {

@@ -1,6 +1,9 @@
-import React, { useContext, useState } from "react";
-import { Theme } from "../../context/themes";
 import "./Form.scss";
+
+import React, { useContext, useState } from "react";
+
+import { Theme } from "../../context/themes";
+import emailjs from '@emailjs/browser';
 
 export const Form = () => {
   const { navBg, text, borderInput, clicked } = useContext(Theme);
