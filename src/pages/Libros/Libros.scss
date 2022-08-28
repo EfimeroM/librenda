@@ -1,0 +1,105 @@
+#libros {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  .banner {
+    width: 100%;
+    height: 78vh;
+    background-position: right;
+    background-size: 100vh;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+    animation-name: animationBannerLibros;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    .content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 7vw;
+      .content-animation {
+        margin-bottom: 200px;
+        margin-left: 300px;
+        animation-name: animationMultisensorial;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        h1 {
+          color: #3b1d00;
+          font-weight: 700;
+          font-size: 5.7rem;
+          margin: 0.5vh 0;
+        }
+        p {
+          font-family: "Bitter", serif;
+          font-weight: 500;
+          font-size: 1.2rem;
+          width: 33vw;
+          line-height: 4vh;
+        }
+      }
+    }
+    .search {
+      width: 80%;
+      margin-left: 10%;
+      height: 7vh;
+      margin-top: -7%;
+      background-color: #ffc692;
+      position: absolute;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      -webkit-filter: blur(1.2px);
+      filter: blur(1.2px);
+      .icon {
+        width: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .img {
+          width: 50%;
+          height: 50%;
+          color: #3b1d00;
+        }
+      }
+      input {
+        width: 79%;
+        height: 60%;
+        border-radius: 3px;
+        border: none;
+        padding: 0 1%;
+        font-size: 1.2rem;
+        background-color: white;
+      }
+      select {
+        background-color: white;
+        width: 10%;
+        font-size: 1rem;
+        height: 60%;
+        margin-left: 2%;
+        padding: 6px;
+      }
+    }
+  }
+}
+@keyframes animationBannerLibros {
+  0% {
+    background-size: 100vh;
+    opacity: 10%;
+  }
+  50% {
+    background-size: 140vh;
+    background-position: top;
+    background-position-x: 140%;
+  }
+  100% {
+    opacity: 100%;
+    background-size: 140vh;
+    background-position: top;
+    background-position-x: 140%;
+  }
+}

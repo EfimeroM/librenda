@@ -1,0 +1,87 @@
+#item-list-container-libros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  .container-libros {
+    width: 85%;
+    padding: 2vh 2vw;
+    .container {
+      margin-top: 5vh;
+      .slider {
+        width: 100%;
+        display: flex;
+        .card {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .card-style {
+            width: 220px;
+            margin: 3vh 0;
+            margin-right: 5vw;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            padding: 2vh 1vw;
+            img {
+              width: 100%;
+
+              border-radius: 10px;
+            }
+            h3 {
+              color: #3b1d00;
+              font-weight: 700;
+            }
+            p {
+              color: #3b1d00;
+              font-size: 0.8rem;
+            }
+            .footer {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+              img {
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+              }
+              p {
+                font-size: 0.7rem;
+                font-weight: 600;
+                padding: 0 15px;
+              }
+            }
+          }
+        }
+      }
+      h2 {
+        color: #3b1d00;
+        font-size: 2.2rem;
+        margin: 0;
+      }
+      .vector {
+        height: 20px;
+      }
+    }
+  }
+}
+
+#item-list-container-libros:after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 0, 0, 0) 0%,
+    rgb(237, 222, 211) 100%
+  );
+}
