@@ -11,7 +11,6 @@
     background-repeat: no-repeat;
     padding: 0;
     margin: 0;
-    opacity: 0;
     animation-name: animationBannerMultisensorial;
     animation-duration: 0.7s;
     animation-fill-mode: forwards;
@@ -22,6 +21,19 @@
       justify-content: center;
       align-items: flex-start;
       padding: 0 7vw;
+      .head {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        h2 {
+          font-size: 1rem;
+          border-radius: 5px;
+          background-color: #7231d2;
+          color: white;
+          padding: 1vh 2vw;
+          margin: 2vh 0 4vh 0;
+        }
+      }
       .content-animation {
         margin-bottom: 200px;
         margin-left: 300px;
@@ -44,22 +56,99 @@
       }
     }
   }
+  @keyframes animationMultisensorial {
+    from {
+      margin-bottom: 200px;
+      margin-left: 300px;
+    }
+    to {
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+  }
+  @keyframes animationBannerMultisensorial {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
-@keyframes animationMultisensorial {
-  from {
-    margin-bottom: 200px;
-    margin-left: 300px;
-  }
-  to {
-    margin-left: 0;
-    margin-bottom: 0;
+
+@media (max-width: 1400px) {
+  #box-multisensorial {
+    .banner {
+      .content {
+        .content-animation {
+          h1 {
+            font-size: 3.7rem;
+          }
+          p {
+            font-size: 0.9rem;
+            width: 90vw;
+          }
+        }
+        .head {
+          h2 {
+            font-size: 1rem;
+            margin: 4vh 0 4vh 0;
+          }
+        }
+      }
+    }
   }
 }
-@keyframes animationBannerMultisensorial {
-  from {
-    opacity: 0;
+@media (max-width: 900px) {
+  #box-multisensorial {
+    .banner {
+      height: 90vh;
+      background-size: 100vw;
+      background-position: bottom right;
+      .content {
+        justify-content: flex-start;
+        .content-animation {
+          h1 {
+            font-size: 2.5rem;
+          }
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
+      .content:after {
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(
+          to top,
+          rgba(255, 0, 0, 0) 0%,
+          rgba(134, 40, 148, 0.156) 100%
+        );
+      }
+    }
   }
-  to {
-    opacity: 1;
+}
+@media (max-width: 600px) {
+  #box-multisensorial {
+    .banner {
+      height: 90vh;
+      background-size: 100vw;
+      background-position: bottom right;
+      .content {
+        justify-content: flex-start;
+        .content-animation {
+          h1 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
   }
 }

@@ -10,7 +10,6 @@ import {
 } from "react-icons/ai";
 import { IoLogoTiktok } from "react-icons/io5";
 import { Form } from "../Form/Form";
-import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const { navBg, text, clicked } = useContext(Theme);
@@ -84,8 +83,8 @@ export const Footer = () => {
         )}
       </div>
       <div className="by" style={{ background: text, color: navBg }}>
-        <p>
-          •• librenda. 2022.{" "}
+        <div className="by-content">
+          <p>•• librenda. 2022{" "}-{" "}</p>
           <a
             className="related-box"
             href="https://cutt.ly/oXCrGOb"
@@ -93,10 +92,9 @@ export const Footer = () => {
             rel="noreferrer"
             style={{ color: navBg }}
           >
-            DISEÑO Y DESARROLLO POR EL EQUIPO
+            DISEÑO Y DESARROLLO POR EL EQUIPO{" "}••
           </a>
-          {" "}••
-        </p>
+        </div>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ export const ItemListContainerLibros = () => {
   return (
     <div id="item-list-container-libros">
       <div className="container-libros">
-        <div className="container">z
+        <div className="container">
           <h2>Novelas</h2>
           <img src={vector} alt="vector" className="vector" style={{width:"150px"}} />
           <div className="slider">
