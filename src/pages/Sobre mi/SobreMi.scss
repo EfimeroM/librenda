@@ -86,28 +86,15 @@
       #quote2{
         position:relative;
         bottom: 50px;
-        left: 80vw;
       }
       #librendaAnchor{
         color:#55B191;
       }
       .article{
         display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
         gap:30px;
-        img.right{
-          border-top-left-radius:18vw ;
-          border-bottom-left-radius:18vw ;
-        }
-        img.left{
-            border-top-right-radius:18vw ;
-            border-bottom-right-radius:18vw ;
-          }
-        &.articleRight{
-          flex-direction: row-reverse;
-        }
         & #link1 {
           text-decoration: none;
           display: inline-block;
@@ -210,7 +197,7 @@
     }
   }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1500px) {
     #sobre-mi {
       .banner {
         .content {
@@ -229,6 +216,25 @@
               font-size: 1rem;
               margin: 4vh 0 4vh 0;
             }
+          }
+        }
+      }
+      .articles{
+        #quote2{
+          left: 80vw;
+        }
+        .article{
+          flex-direction: row;
+          img.right{
+            border-top-left-radius:18vw ;
+            border-bottom-left-radius:18vw ;
+          }
+          img.left{
+              border-top-right-radius:18vw ;
+              border-bottom-right-radius:18vw ;
+            }
+          &.articleRight{
+            flex-direction: row-reverse;
           }
         }
       }
@@ -270,22 +276,51 @@
   @media (max-width: 600px) {
     #sobre-mi {
       .banner {
-        height: 95vh;
-        background-size: 100vw;
-        background-position: bottom right;
+        height: 100vh;
+        background-position: bottom;
+        background-size: contain;
         .content {
           justify-content: flex-start;
+          align-items: center;
           .content-animation {
-            padding: 0 3.5vw;
+            padding: 0;
             max-width: 90vw;
             h1 {
-              font-size:25px;
-              width: 70vw;
+              font-size:22px;
+              width: 80vw;
             }
             p {
-              max-width: 300px;
-              font-size: 16px;
+              max-width: 80vw;
+              font-size: 14px;
             }
+          }
+        }
+      }
+      .articles{
+        #quoteText{
+          font-size: 16px;
+        }
+        #quote2{
+          left: 70vw;
+        }
+        .article{
+          h1{
+            font-size: 30px;
+          }
+          p{
+            font-size: 18px;
+          }
+          img.right{
+            border-radius:135px ;
+            max-width: 270px;
+          }
+          img.left{
+            border-radius:135px ;
+            max-width: 270px;
+            }
+          flex-direction: column-reverse;
+          &.articleRight{
+            flex-direction: column-reverse;
           }
         }
       }
