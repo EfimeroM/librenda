@@ -10,16 +10,6 @@ export const NavBar = () => {
   const [menu, setMenu] = useState(false);
   return (
     <div id="nav-bar" style={{ background: `${navBg}87` }}>
-      <div className="circle" style={{ background: iconTheme }}></div>
-      <div className="square" style={{ background: iconTheme }}></div>
-      <div
-        className="triangle"
-        style={{
-          borderRight: "1.1vh solid transparent",
-          borderBottom: `1.9vh solid ${iconTheme}`,
-          borderLeft: "1.1vh solid transparent",
-        }}
-      ></div>
       <div className="nav">
         <button
           className="icon-menu"
@@ -37,7 +27,7 @@ export const NavBar = () => {
           to={"/"}
           onClick={() => setMenu(!menu)}
           className={menu ? "li animation-in" : "li animation-out"}
-          style={{ background: "#55b191" }}
+          style={clicked ==="sobreMi" ? {display:"none"}:{ background: "#55b191" }}
         >
           SOBRE MÍ
         </Link>
@@ -45,7 +35,7 @@ export const NavBar = () => {
           to={"/que-vas-a-encontrar"}
           onClick={() => setMenu(!menu)}
           className={menu ? "li animation-in" : "li animation-out"}
-          style={{ background: "#0884FF" }}
+          style={clicked ==="encontrar" ? {display:"none"}:{ background: "#0884FF" }}
         >
           ¿QUÉ VAS A ENCONTRAR?
         </Link>
@@ -53,7 +43,7 @@ export const NavBar = () => {
           to={"/libros"}
           onClick={() => setMenu(!menu)}
           className={menu ? "li animation-in" : "li animation-out"}
-          style={{ background: "#FFC692", color: "#3B1D00" }}
+          style={clicked ==="libros" ? {display:"none"}:{ background: "#FFC692", color: "#3B1D00" }}
         >
           LIBROS
         </Link>
@@ -61,7 +51,7 @@ export const NavBar = () => {
           to={"box-multisensorial"}
           onClick={() => setMenu(!menu)}
           className={menu ? "li animation-in" : "li animation-out"}
-          style={{ background: "#7231D2" }}
+          style={clicked ==="boxMultisensorial" ? {display:"none"}:{ background: "#7231D2" }}
         >
           BOX MULTISENSORIAL
         </Link>
@@ -69,7 +59,7 @@ export const NavBar = () => {
           to={"contactame"}
           onClick={() => setMenu(!menu)}
           className={menu ? "li animation-in" : "li animation-out"}
-          style={{ background: "#B51F70" }}
+          style={clicked ==="contactame" ? {display:"none"}:{ background: "#B51F70" }}
         >
           CONTACTAME
         </Link>
