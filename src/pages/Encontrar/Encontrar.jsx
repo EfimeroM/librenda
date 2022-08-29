@@ -4,7 +4,6 @@ import ButtonIG from '../../components/ButtonIG/ButtonIG';
 import {Link} from 'react-router-dom'
 import React from 'react';
 import banner from "../../assets/encontrar/banner.png";
-import bannerMobile from "../../assets/box-multisensorial/banner-mobile.jpg";
 import quote from '../../assets/encontrar/quote.png'
 import { useMediaQuery } from "react-responsive";
 
@@ -14,7 +13,7 @@ export const Encontrar = () => {
   
   return (
     <div id='encontrar'>
-      <div className="banner" style={screen ? { backgroundImage: `url("${banner}")` } : { backgroundImage: `url("${bannerMobile}")` }}>
+      <div className="banner" style={{ backgroundImage: `url("${banner}")` }}>
         <div className="content">
           <div className="head">
             <h2 style={screen ? { display: "none" } : { display: "block" }}>
@@ -28,7 +27,7 @@ export const Encontrar = () => {
 
             <h1>Una gran variedad de recomendaciones y propuestas...</h1>
             <p>
-              No sigo patrones específicos porque leo lo que necesito en ese momento de mi vida. Por eso, la idea es que encuentres en Librenda una gran variedad de recomendaciones y propuestas para que vos elijas según tu criterio.
+              No sigo patrones específicos porque leo lo que necesito en ese <span style={{textDecoration: 'underline'}}>momento</span> de mi vida. Por eso, la idea es que encuentres en Librenda una gran variedad de recomendaciones y propuestas para que vos elijas según tu criterio.
             </p>
             <p>
               Es por ello que, <span>Librenda</span> incluye muchos géneros y temáticas tratadas por autores nacionales e internacionales.
@@ -53,13 +52,13 @@ export const Encontrar = () => {
       <div id='section2'>
         <div>
           <p>Lo que más quiero es fomentar el hábito de la lectura, que juntos conozcamos otras culturas y podamos intercambiar pensamientos mucho más allá de mis gustos personales.</p>
-          <div id='vl'></div>
-          <p>Ahora te toca a vos elegir con cuál hacés match hoy, según tu estilo, tus ánimos o lo que necesites: reirte, pensar, aprender, llorar, viajar o volver a creer en el amor.</p>
-        </div>
-        <div>
           <Link to='/libros' id='linkButton'>
             IR A LA BIBLIOTECA
           </Link>
+        </div>
+        <div id='vl'></div>
+        <div>
+          <p>Ahora te toca a vos elegir con cuál hacés match hoy, según tu estilo, tus ánimos o lo que necesites: reirte, pensar, aprender, llorar, viajar o volver a creer en el amor.</p>
           <ButtonIG caption='HACE MATCH CON TU LIBRO'/>
         </div>
       </div>
