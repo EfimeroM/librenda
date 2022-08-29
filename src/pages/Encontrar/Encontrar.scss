@@ -28,19 +28,101 @@
           animation-name: animationMultisensorial;
           animation-duration: 0.3s;
           animation-fill-mode: forwards;
+          #quote1{
+            position: relative;
+            top: 30px;
+            right: 20px;
+          }
           h1 {
             color: #003569;
             font-weight: 700;
-            font-size: 1.7rem;
+            font-size: 50px;
             margin: 0.5vh 0;
+            width: 40vw;
           }
           p {
-            font-family: "Gotham", serif;
+            font-family: "Bitter", serif;
+            text-align: justify;
             font-weight: 500;
-            font-size: 1.2rem;
-            width: 33vw;
+            font-size: 20px;
+            width: 40vw;
             line-height: 4vh;
+            color: #003569;
+            font-style: italic;
           }
+          span{
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    #quote-area{
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap:20px;
+      padding: 2vh 7vw;
+      h2{
+        color: #003569;
+        font-weight: 500;
+        font-size: 30px;
+      }
+      #quote-img{
+        max-height: 50vh;
+        max-width: 50vw;
+        border-radius: 25vw;
+      }
+      #quote2{
+        position: relative;
+        top:40px;
+        right:20px;
+      }
+      #quote3{
+        position: relative;
+        bottom:50px;
+        left:50vw;
+      }
+    }
+    #section2{
+      padding: 2vh 7vw 10vh 7vw;
+      div{
+        text-align: justify;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap:20px;
+        padding-bottom: 5vh;
+        p{
+          font-size: 23px;
+          color: #003569;
+        }
+        #vl{
+          border-left: 2px solid #0884FF;
+          height: 100px;
+        }
+      }
+      #buttonIG{
+        background-color: #003569;
+      }
+      #linkButton{
+        width: 360px;
+        padding: 15px 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        gap: 5px;
+        border: 0;
+        border-radius: 49.22px;
+        text-decoration: none;
+        color:white;
+        font-weight: 500;
+        background-color: #003569;
+        &:hover{
+          opacity: 0.9;
         }
       }
     }
