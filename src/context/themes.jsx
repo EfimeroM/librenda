@@ -1,4 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
+
 import { useLocation } from "react-router-dom";
 
 export const Theme = createContext([]);
@@ -10,6 +11,7 @@ export const ThemeProvider = ({ children }) => {
   const [text, setText] = useState("#ffff");
   const [clicked, setClicked] = useState("");
   const [borderInput, setBorderInput] = useState("#ffff");
+  const [buttonBg, setButtonBg] = useState('#ffff')
 
   useEffect(() => {
     switch (location.pathname) {
@@ -20,6 +22,7 @@ export const ThemeProvider = ({ children }) => {
         setText("white");
         setClicked("sobreMi");
         setBorderInput("#00A86E");
+        setButtonBg('#002A1C');
         break;
       case "/que-vas-a-encontrar":
         setNavBg("#0884FF");
@@ -28,6 +31,7 @@ export const ThemeProvider = ({ children }) => {
         setText("white");
         setClicked("encontrar");
         setBorderInput("#0054A8");
+        setButtonBg('#003569');
         break;
       case "/libros":
         setNavBg("#FFC692");
@@ -60,7 +64,7 @@ export const ThemeProvider = ({ children }) => {
 
   return (
     <Theme.Provider
-      value={{ navBg, text, clicked, borderInput, iconTheme, setTheme }}
+      value={{ navBg, text, clicked, borderInput, iconTheme, setTheme, buttonBg }}
     >
       {children}
     </Theme.Provider>

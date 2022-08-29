@@ -1,25 +1,37 @@
 import "./Form.scss";
 
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 
 import { Theme } from "../../context/themes";
+import emailConfig from '../../emailjs.config'
 import emailjs from '@emailjs/browser';
 
 export const Form = () => {
+
   const { navBg, text, borderInput, clicked } = useContext(Theme);
   const [hover, setHover] = useState(false);
+  const form = useRef();
+
   const onSubmit = (e) => {
     e.preventDefault();
+      emailjs.sendForm(emailConfig.serviceID, emailConfig.templateID, form.current, emailConfig.publicKey)
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
   };
+
   return (
     <>
-      <form>
+      <form ref={form}>
         <p style={{ fontWeight: `${clicked === "contactame" && "600"}` }}>
           Tu e-mail
         </p>
         <input
           type="email"
           className="input"
+          required
           style={{
             border: `3px solid ${
               clicked === "contactame" ? "#B51F70" : borderInput
