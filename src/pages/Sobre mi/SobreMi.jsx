@@ -8,8 +8,7 @@ import article2 from '../../assets/sobre-mi/article2.png'
 import article3 from '../../assets/sobre-mi/article3.png'
 import article4 from '../../assets/sobre-mi/article4.png'
 import banner from "../../assets/sobre-mi/banner.png";
-import bannerMobile from "../../assets/box-multisensorial/banner-mobile.jpg";
-import greenVector from '../../assets/sobre-mi/greenVector.png'
+import bannerMobile from "../../assets/sobre-mi/banner-mobile.png";
 import { useMediaQuery } from "react-responsive";
 
 export const SobreMi = () => {
@@ -85,7 +84,7 @@ export const SobreMi = () => {
               Creo que todos tenemos un libro y no me refiero a una guía para toda la vida, sino todo lo contrario. Un libro que te sirva para este momento en particular que estás pasando, donde podes necesitar: entretenimiento, consuelo, compañía, aprendizaje o respuestas.
             </p>
             <p>El hábito de la lectura es un momento de amor propio, crecimiento, autoconocimiento y exploración de diferentes emociones. </p>
-            <p>En mis redes sociales <a>@librendaok</a> te comparto reseñas para que hagas match con tu libro. Próximamente, voy a tener a la venta todo lo que necesitas para armar tu espacio de lectura multisensorial e individual.</p>
+            <p>En mis redes sociales <a href='https://www.instagram.com/librendaok/' id='librendaAnchor'>@librendaok</a> te comparto reseñas para que hagas match con tu libro. Próximamente, voy a tener a la venta todo lo que necesitas para armar tu espacio de lectura multisensorial e individual.</p>
           </div>
         </div>
         <div className='article articleRight'>

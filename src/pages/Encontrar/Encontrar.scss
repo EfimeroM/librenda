@@ -22,6 +22,18 @@
         justify-content: center;
         align-items: flex-start;
         padding: 0 7vw;
+        .head {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          h2 {
+            font-size: 1rem;
+            border-radius: 5px;
+            background-color: #0A80FC;
+            color: white;
+            padding: 1vh 2vw;
+          }
+        }
         .content-animation {
           margin-bottom: 200px;
           margin-left: 300px;
@@ -38,7 +50,6 @@
             font-weight: 700;
             font-size: 50px;
             margin: 0.5vh 0;
-            width: 40vw;
           }
           p {
             font-family: "Bitter", serif;
@@ -58,7 +69,6 @@
     }
     #quote-area{
       display:flex;
-      flex-direction: row;
       justify-content: center;
       align-items: center;
       gap:20px;
@@ -86,10 +96,18 @@
     }
     #section2{
       padding: 2vh 7vw 10vh 7vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap:20px;
+      #vl{
+        border-left: 2px solid #0884FF;
+        height: 150px;
+      }
       div{
         text-align: justify;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         gap:20px;
@@ -97,10 +115,6 @@
         p{
           font-size: 23px;
           color: #003569;
-        }
-        #vl{
-          border-left: 2px solid #0884FF;
-          height: 100px;
         }
       }
       #buttonIG{
@@ -143,5 +157,101 @@
     }
     to {
       opacity: 1;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    #encontrar {
+      .banner {
+        .content {
+          .content-animation {
+            h1 {
+              font-size: 3.7rem;
+              width: 40vw;
+            }
+            p {
+              font-size: 0.9rem;
+              width: 90vw;
+            }
+          }
+          .head {
+            h2 {
+              font-size: 1rem;
+              margin: 4vh 0 4vh 0;
+            }
+          }
+        }
+      }
+      #quote-area{
+        flex-direction: row;
+      }
+      #section2{
+        flex-direction: row;
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    #encontrar {
+      .banner {
+        height: 90vh;
+        background-size: 100vw;
+        background-position: bottom right;
+        .content {
+          justify-content: flex-start;
+          .content-animation {
+            h1 {
+              font-size: 2.5rem;
+              width: 40vw;
+            }
+            p {
+              font-size: 0.9rem;
+            }
+          }
+        }
+        .content:after {
+          position: absolute;
+          content: "";
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          background: linear-gradient(
+            to top,
+            rgba(255, 0, 0, 0) 0%,
+            rgba(134, 40, 148, 0.156) 100%
+          );
+        }
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    #encontrar {
+      .banner {
+        background-size: 100vw;
+        background-position: bottom right;
+        .content {
+          .content-animation {
+            padding: 0 3.5vw;
+            max-width: 90vw;
+            h1 {
+              font-size:25px;
+              width: 70vw;
+            }
+            p {
+              max-width: 300px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      #quote-area{
+        flex-direction: column-reverse;
+      }
+      #section2{
+        flex-direction: column;
+        #vl{
+          display: none;
+        }
+      }
     }
   }
