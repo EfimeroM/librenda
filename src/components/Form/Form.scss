@@ -1,69 +1,77 @@
-form{
-    display: flex;
-    flex-direction: column;
-    h2{
-        font-size: 1.4rem;
-    }
-    p{
-        font-size: 1.2rem;
-        font-weight: 500;
-    }
-    .input{
-        border-radius: 10px;
-        width: 60%;
-        font-size: 1.2rem;
-        padding: 7px 1vw;
-        outline: none;
-    }
-    .textarea{
-        height: 80px
-    }
-    .submit{
-        width: 65%;
-        border-radius: 5px;
-        font-size: .7rem;
-        font-weight: 600;
-        padding: 10px 1vw;
-        background-color: rgba(255, 0, 0, 0);
-        border: none;
-        outline: none;
-        margin-top: 20px;
-    }
-    .submit:hover{
-        cursor: pointer;
-    }
-    .submit-animation{
-        animation: fadeIn .7s linear;
-    }
+form {
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .input {
+    border-radius: 10px;
+    width: 60%;
+    font-size: 1.2rem;
+    padding: 7px 1vw;
+    outline: none;
+  }
+  .textarea {
+    height: 80px;
+  }
+  .submit {
+    width: 65%;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 10px 1vw;
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+    outline: none;
+    margin-top: 20px;
+  }
+  .submit:hover {
+    cursor: pointer;
+  }
+  .submit-animation {
+    animation: fadeIn 0.7s linear;
+  }
 }
 @keyframes fadeIn {
-    from{
-        opacity: 20%;
-    }
-    to{
-        opacity: 100%;
-    }
+  from {
+    opacity: 20%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 @media (max-width: 800px) {
-    form{
-        padding: 4vh 0;
-        .input{
-            border-radius: 10px;
-            width: 95%;
-            font-size: 1.2rem;
-            padding: 7px 1vw;
-            outline: none;
-        }
-        .submit{
-            width: 100%;
-            border-radius: 5px;
-            font-size: .7rem;
-            font-weight: 600;
-            padding: 10px 1vw;
-            background-color: rgba(255, 0, 0, 0);
-            border: none;
-            outline: none;
-            margin-top: 20px;
-        }
+  form {
+    padding: 4vh 0;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 0 15%;
+    .input {
+      border-radius: 10px;
+      width: 90%;
+      font-size: 1.2rem;
+      padding: 7px 1vw;
+      outline: none;
     }
+    .submit {
+      width: 100%;
+      border-radius: 5px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 10px 1vw;
+      background-color: rgba(255, 0, 0, 0);
+      border: none;
+      outline: none;
+      margin-top: 20px;
+    }
+    p {
+        width: 100%;
+      text-align: start;
+    }
+  }
 }

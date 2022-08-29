@@ -22,6 +22,21 @@
       animation-name: animationContactame;
       animation-duration: 0.3s;
       animation-fill-mode: forwards;
+      .head {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        h2 {
+          font-size: 1rem;
+          border-radius: 5px;
+          background-color: #b51f70;
+          color: white;
+          padding: 1vh 2vw;
+          margin: 2vh 0 4vh 0;
+          font-family: "Gotham", sans-serif;
+          font-weight: 600;
+        }
+      }
       h1 {
         font-size: 3rem;
         color: #4c0b2f;
@@ -91,43 +106,40 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 4vh .5vw 15vh .5vw;
-    .animation-contactame{
-      .content{
+    padding: 4vh 0.5vw 15vh 0.5vw;
+    .animation-contactame {
+      .content {
         h1 {
           font-size: 5.8vh;
-          margin:.5vh;
+          margin: 0.5vh;
         }
         h2 {
           font-size: 1.2rem;
         }
       }
     }
-    form{
-      .input {
-        width: 80vw;
-      }
-      .submit {
+    form {
+      padding: 4vh 0;
+      justify-content: center;
+      align-items: center;
+      width: 70%;
+      margin: 0 15%;
+      .input{
         width: 100%;
-        border-radius: 5px;
-        font-size: 0.7rem;
-        font-weight: 500;
-        padding: 10px 1vw;
-        background-color: rgba(255, 0, 0, 0);
-        border: none;
-        outline: none;
-        margin-top: 20px;
+      }
+      .submit{
+        width: 105%;
       }
     }
   }
 }
 @media (max-width: 500px) {
   #contactame {
-    .animation-contactame{
-      .content{
+    .animation-contactame {
+      .content {
         h1 {
           font-size: 1.8rem;
-          margin:.5vh;
+          margin: 0.5vh;
         }
         h2 {
           font-size: 1.2rem;
